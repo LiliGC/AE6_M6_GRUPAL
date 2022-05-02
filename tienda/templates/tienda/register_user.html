@@ -17,13 +17,5 @@
         {{register_form|crispy}}
         <input class="btn btn-primary" type="submit" value="Enviar" />
     </form>
-    {% if messages %}
-        {%for message in messages%}
-        <div>
-            {{message}}
-        </div>
-        {% endfor %}
-    {% endif %}   
 </div>
-
 {% endblock %}

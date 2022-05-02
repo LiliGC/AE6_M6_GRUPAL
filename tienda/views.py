@@ -94,7 +94,7 @@ def login_user(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"Tu haz iniciado sesión como {username}.")
-				return redirect('login')
+				return redirect('index')
 			else:
 				messages.error(request,"Nombre o contraseña no válidos.")
 		else:

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{% static './css/styles.css' %}">
 
 <body>
+  {% include 'tienda/includes/messages.html' %}
   {% load crispy_forms_tags %} 
 	<div class="p-1 bg-dark text-white text-center">
     <div class="container-fluid">
@@ -169,7 +170,7 @@
           <center>
             <font size=2>Grupo 1: Alberto Briones - Liliana Garmendia - Diego González - Te Lo Vendo©  2022.</font>
           </center>
-        </footer> 
+        </footer>
       {% endblock %}
         </div>
       </div>
