@@ -1,0 +1,38 @@
+{% extends './estadistica.html' %}
+
+{% block title %}<title>Lista de proveedores</title>{% endblock %}
+
+
+{% block content%}
+    <div class="row">
+        <div class="bg-light text-dark">
+            <h2>Datos de proveedores</h2>
+            <div class="table-responsive align-middle">
+                <table id="clientes" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Representante</th>
+                            <th scope="col">Razón social</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Correo electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prov in proveedores %}
+                        <tr>
+                            <td>{{ prov.id }}</td>
+                            <td>{{ prov.nombre }}</td>
+                            <td>{{ prov.razon_social }}</td>
+                            <td>{{ prov.telefono }}</td>
+                            <td>{{ prov.correo_electronico }}</td>      
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <a href= {% url 'registroprov' %}>Agregar proveedor</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+<br>

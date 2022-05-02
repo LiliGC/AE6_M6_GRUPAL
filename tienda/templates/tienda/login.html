@@ -1,0 +1,29 @@
+{% extends './index.html' %}
+
+{% block title %}<title>Iniciar sesión usuarios</title>{% endblock %}
+
+{% block content%}
+
+{% load crispy_forms_tags %}
+
+<div class="container py-5">
+    
+	<h3>Iniciar sesión</h3>
+    <br>
+	<form method="post">
+
+        {% csrf_token %}
+
+        {{login_form|crispy}}
+        <input class="btn btn-primary" type="submit" value="Enviar" />
+    </form>
+    {% if messages %}
+        {%for message in messages%}
+        <script>
+            alert("{{message}}");
+        </script>
+        {% endfor %}
+    {% endif %}   
+</div>
+
+{% endblock %}

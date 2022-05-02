@@ -1,0 +1,11 @@
+#demo {
+    max-width: 40%;
+    max-height: 40%;    
+    margin: 0 auto;
+}
+.carrusel { 
+  color: #fff; 
+  background-color: #000;
+}
+.social { max-width: 25px;}
+

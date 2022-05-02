@@ -1,0 +1,29 @@
+{% extends './index.html' %}
+
+{% block title %}<title>Registro de proveedores</title>{% endblock %}
+
+{% block content%}
+
+{% load crispy_forms_tags %}
+
+<div class="container py-5">
+    
+	<h3>Registro de proveedores</h3>
+    <br>
+	<form method="post">
+
+        {% csrf_token %}
+
+        {{form|crispy}}
+        <input class="btn btn-primary" type="submit" value="Enviar" />
+    </form>
+    {% if messages %}
+        {%for message in messages%}
+        <div>
+            {{message}}
+        </div>
+        {% endfor %}
+    {% endif %}   
+</div>
+
+{% endblock %}

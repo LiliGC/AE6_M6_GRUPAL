@@ -1,0 +1,39 @@
+{% extends './estadistica.html' %}
+
+{% block title %}<title>Lista de clientes</title>{% endblock %}
+
+
+{% block content%}
+    <div class="row">
+        <div class="bg-light text-dark">
+            <h2>Datos de Clientes</h2>
+            <div class="table-responsive align-middle">
+                <table id="clientes" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Correo electrónico</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Dirección</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cli in clientes %}
+                        <tr>
+                            <td>{{ cli.id }}</td>
+                            <td>{{ cli.nombre }}</td>
+                            <td>{{ cli.apellido }}</td>
+                            <td>{{ cli.correo_electronico }}</td>
+                            <td>{{ cli.telefono }}</td>
+                            <td>{{ cli.direccion }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+<br>
