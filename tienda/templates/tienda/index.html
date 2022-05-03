@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
+  {% load static %}
   {% block title %}<title>Te lo vendo</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +11,11 @@
   <link rel="shortcut icon" href="https://image.shutterstock.com/image-vector/shop-vector-icon-260nw-532217443.jpg"
     width="25px" height="25px" type="image/x-icon">
   <!-- Add additional CSS in static file -->
-  {% load static %}
   <link rel="stylesheet" href="{% static './css/styles.css' %}">
+  <script src="{% static './js/funciones.js' %}"></script>
 
 <body>
   {% include 'tienda/includes/messages.html' %}
-  {% load crispy_forms_tags %} 
 	<div class="p-1 bg-dark text-white text-center">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'index' %}">

@@ -22,12 +22,7 @@ def estadistica(request):
     return render(request, 'tienda/estadistica.html')
 
 def confirmacion(request):
-    datos= request.GET
-    nombre=datos["nombre"]
-    email=datos["email"]
-    mensaje=datos["mensaje"]
-    print(nombre, email, mensaje)
-    return render(request, 'tienda/confirmacion.html', {"mensaje":"Datos recibidos"})
+    return render(request, 'tienda/confirmacion.html')
 
 @login_required
 def clientes(request):
